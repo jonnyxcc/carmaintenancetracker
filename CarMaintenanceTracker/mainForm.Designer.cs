@@ -44,6 +44,7 @@
             this.fileToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.msMain.Location = new System.Drawing.Point(0, 0);
+            this.msMain.MinimumSize = new System.Drawing.Size(0, 0);
             this.msMain.Name = "msMain";
             this.msMain.Size = new System.Drawing.Size(994, 38);
             this.msMain.TabIndex = 0;
@@ -60,6 +61,8 @@
             // 
             // settingsToolStripMenuItem
             // 
+            this.settingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("settingsToolStripMenuItem.Image")));
+            this.settingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
             this.settingsToolStripMenuItem.Text = "&Settings";
@@ -76,8 +79,10 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
+            this.aboutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(82, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(98, 34);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 

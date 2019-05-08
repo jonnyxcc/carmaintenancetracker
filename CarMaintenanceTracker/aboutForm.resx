@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="rtbEula.Text" xml:space="preserve">
+    <value>This project contains several resources using free licenses, listed below.
+
+Icon Archive (Car Repair Blue Icon)
+http://www.iconarchive.com/show/points-of-interest-icons-by-icons-land/Car-Repair-Blue-icon.html
+
+Nut Icon by Bogdan Rosu (flaticon)
+https://www.flaticon.com/free-icon/nut-icon_69398#term=settings%20icon&amp;page=1&amp;position=1
+
+Information by Good Ware (flaticon)
+https://www.flaticon.com/free-icon/information_685815#term=information&amp;page=1&amp;position=3</value>
+  </data>
 </root>

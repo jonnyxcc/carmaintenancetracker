@@ -65,6 +65,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="settingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settingsForm.Designer.cs">
+      <DependentUpon>settingsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="aboutForm.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Icons-Land-Points-Of-Interest-Car-Repair-Blue.ico" />
+    <Content Include="Resources\information.png" />
+    <Content Include="Resources\nut-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
