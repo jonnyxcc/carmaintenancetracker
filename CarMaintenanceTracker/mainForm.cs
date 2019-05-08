@@ -16,5 +16,23 @@ namespace CarMaintenanceTracker
         {
             InitializeComponent();
         }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (aboutForm about = new aboutForm() { StartPosition = FormStartPosition.CenterParent })
+            {
+                about.ShowDialog();
+            }
+        }
+
+        private void QuitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
