@@ -34,5 +34,17 @@ namespace CarMaintenanceTracker.Properties {
                 this["SettingsUpdated"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastCar {
+            get {
+                return ((string)(this["LastCar"]));
+            }
+            set {
+                this["LastCar"] = value;
+            }
+        }
     }
 }

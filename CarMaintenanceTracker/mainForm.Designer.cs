@@ -44,7 +44,6 @@
             this.fileToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.msMain.Location = new System.Drawing.Point(0, 0);
-            this.msMain.MinimumSize = new System.Drawing.Size(0, 0);
             this.msMain.Name = "msMain";
             this.msMain.Size = new System.Drawing.Size(994, 38);
             this.msMain.TabIndex = 0;
@@ -64,7 +63,7 @@
             this.settingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("settingsToolStripMenuItem.Image")));
             this.settingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.settingsToolStripMenuItem.Text = "Car &Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
@@ -72,7 +71,7 @@
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.ShortcutKeyDisplayString = "Alt+F4";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
             // 
@@ -97,6 +96,8 @@
             this.MainMenuStrip = this.msMain;
             this.Name = "mainForm";
             this.Text = "Car Maintenance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.msMain.ResumeLayout(false);
             this.msMain.PerformLayout();
             this.ResumeLayout(false);
