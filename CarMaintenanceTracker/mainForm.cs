@@ -56,10 +56,28 @@ namespace CarMaintenanceTracker
                     CarList.AddCar(entryForm.NewCar);
                     _selectedCar = CarList.GetCar(entryForm.NewCar);
                     _selectedCar.MonthlyMilesEstimate = entryForm.CarMileage;
-                    CarList.SaveCarList();
+                    CarList.SaveCarList(); //want to make sure to save the mileage entered
 
                     Properties.Settings.Default.LastCar = entryForm.NewCar;
                     Properties.Settings.Default.Save();
+                }
+            }
+
+            //need to run after init to update the car settings
+            if (Properties.Settings.Default.LastLaunchedDate == default(DateTime))
+            {
+                Properties.Settings.Default.LastLaunchedDate = DateTime.Now;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                int daysSinceUse = (int)(DateTime.Now - Properties.Settings.Default.LastLaunchedDate).Days;
+                if (daysSinceUse > 0)
+                {
+                    Properties.Settings.Default.LastLaunchedDate = DateTime.Now;
+                    Properties.Settings.Default.Save();
+
+                    CarList.UpdateMileages(daysSinceUse);
                 }
             }
         }

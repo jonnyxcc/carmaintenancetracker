@@ -101,6 +101,14 @@ namespace CarMaintenanceTracker
             catch { }
         }
 
+        public static void UpdateMileages(int daysSinceUse)
+        {
+            foreach (Car car in _carList)
+            {
+                car.CarMileage += (car.MonthlyMilesEstimate / 30) * daysSinceUse;
+            }
+        }
+
         /// <summary>
         /// Populates a combobox with a list of cars
         /// </summary>
@@ -146,7 +154,7 @@ namespace CarMaintenanceTracker
         //the car's mileage
         public int CarMileage { get; set; }
 
-        public int MonthlyMilesEstimate { get; set; }
+        public int MonthlyMilesEstimate { get; set; } = 1200; //1200 as default value
         
         public int MilesSinceOilChange { get; set; }
         public int RecommendedOilChangeMiles { get; set; }
@@ -187,12 +195,22 @@ namespace CarMaintenanceTracker
             xmlTemp = xmlCar.Element("Name");
             if (xmlTemp != null)
             {
-                newCar = new Car(xmlCar.Value);
+                newCar = new Car(xmlTemp.Value);
             }
             else
             {
                 //error occurs here
                 return new Car("Error car");
+            }
+            xmlTemp = xmlCar.Element("Mileage");
+            if (xmlTemp != null)
+            {
+                if (Int32.TryParse(xmlTemp.Value, out int val)) newCar.CarMileage = val;
+            }
+            xmlTemp = xmlCar.Element("MonthlyMilesEstimate");
+            if (xmlTemp != null)
+            {
+                if (Int32.TryParse(xmlTemp.Value, out int val)) newCar.MonthlyMilesEstimate = val;
             }
 
             return newCar;

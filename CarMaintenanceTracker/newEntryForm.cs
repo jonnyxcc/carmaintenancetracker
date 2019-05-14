@@ -29,7 +29,7 @@ namespace CarMaintenanceTracker
             }
         }
 
-        public string NewCar
+        public string NewCar //return the car's name
         {
             get
             {
@@ -37,7 +37,7 @@ namespace CarMaintenanceTracker
             }
         }
 
-        public int CarMileage
+        public int CarMileage //return the car's mileage
         {
             get
             {

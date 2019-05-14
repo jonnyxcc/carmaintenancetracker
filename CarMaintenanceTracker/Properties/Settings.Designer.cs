@@ -46,5 +46,16 @@ namespace CarMaintenanceTracker.Properties {
                 this["LastCar"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime LastLaunchedDate {
+            get {
+                return ((global::System.DateTime)(this["LastLaunchedDate"]));
+            }
+            set {
+                this["LastLaunchedDate"] = value;
+            }
+        }
     }
 }
