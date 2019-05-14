@@ -55,6 +55,8 @@ namespace CarMaintenanceTracker
                     entryForm.ShowDialog();
                     CarList.AddCar(entryForm.NewCar);
                     _selectedCar = CarList.GetCar(entryForm.NewCar);
+                    _selectedCar.MonthlyMilesEstimate = entryForm.CarMileage;
+                    CarList.SaveCarList();
 
                     Properties.Settings.Default.LastCar = entryForm.NewCar;
                     Properties.Settings.Default.Save();

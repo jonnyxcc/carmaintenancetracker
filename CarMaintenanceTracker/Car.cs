@@ -167,13 +167,13 @@ namespace CarMaintenanceTracker
             xmlCar.Add(new XElement("MonthlyMilesEstimate", MonthlyMilesEstimate));
 
             XElement xmlOilChange = new XElement("OilChangeSettings");
-            xmlOilChange.Add(new XElement("MilesSinceOilChange", MilesSinceOilChange));
-            xmlOilChange.Add(new XElement("RecommendedOilChangeMiles", RecommendedOilChangeMiles));
+            xmlOilChange.Add(new XElement("MilesSince", MilesSinceOilChange));
+            xmlOilChange.Add(new XElement("RecommendedMiles", RecommendedOilChangeMiles));
             xmlCar.Add(xmlOilChange);
 
             XElement xmlTireRotation = new XElement("TireChangeSettings");
-            xmlTireRotation.Add(new XElement("MilesSinceTireRotation", MilesSinceTireRotation));
-            xmlTireRotation.Add(new XElement("RecommendedTireRotationMiles", RecommendedTireRotationMiles));
+            xmlTireRotation.Add(new XElement("MilesSince", MilesSinceTireRotation));
+            xmlTireRotation.Add(new XElement("RecommendedMiles", RecommendedTireRotationMiles));
             xmlCar.Add(xmlTireRotation);
 
             return xmlCar;

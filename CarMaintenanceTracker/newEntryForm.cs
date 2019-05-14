@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CarMaintenanceTracker
@@ -19,10 +12,20 @@ namespace CarMaintenanceTracker
 
         private void newEntryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (DialogResult != DialogResult.OK) //don't allow closing the window with the X button
+            {
+                e.Cancel = true;
+                return;
+            }
             if (string.IsNullOrEmpty(tbCarName.Text))
             {
                 e.Cancel = true;
-                epMain.SetError(tbCarName, "You must enter the name of a car");
+                epName.SetError(tbCarName, "You must enter the name of a car");
+            }
+            if (!int.TryParse(tbCarMileage.Text, out int val))
+            {
+                e.Cancel = true;
+                epMileage.SetError(tbCarMileage, "You must enter the estimated car's mileage as a number");
             }
         }
 
@@ -31,6 +34,14 @@ namespace CarMaintenanceTracker
             get
             {
                 return tbCarName.Text;
+            }
+        }
+
+        public int CarMileage
+        {
+            get
+            {
+                return Convert.ToInt32(tbCarMileage.Text);
             }
         }
     }
